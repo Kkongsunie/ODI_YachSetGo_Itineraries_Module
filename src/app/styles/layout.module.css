@@ -1,0 +1,26 @@
+
+.headerMenu {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 13px;
+    height: 55px;
+    border-radius: 12px;
+    height: 64px;
+    padding: 0px 16px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.icon {
+    background-color: rgba(0, 156, 194, 0.2) ;
+    border-radius: 5px;
+    color: #009CC2;
+    padding: 5px;
+    
+    border-radius: 10px;
+}

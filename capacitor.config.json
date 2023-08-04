@@ -1,0 +1,10 @@
+{
+  "appId": "com.example.app",
+  "appName": "YachSetGo",
+  "webDir": "out",
+  "server": {
+    "url": "http://192.168.8.110:3000",
+    "cleartext": true,
+    "androidScheme": "https"
+  }
+}

@@ -1,7 +1,14 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import styles from '../app/styles/layout.module.css'
+import { Poppins } from 'next/font/google'
+import MenuIcon from '@mui/icons-material/Menu';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import Image from 'next/image';
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ 
+  subsets: ['latin'] ,
+  weight: ['100','200','300','400','500','600','700','800','900']
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +18,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>
+        <div className={styles.headerMenu}>
+          <div className={styles.navbar}>
+            <div>
+             <MenuIcon fontSize='large' className={styles.icon}/>
+            </div>
+            <div style={{display: 'flex', alignItems: 'center' ,flexDirection: 'row'}}>
+              <DarkModeIcon fontSize='large' sx={{borderRadius: '20px', marginRight: '10px'}} className={styles.icon} />
+              <Image src="/images/Avatar.png" width={40} height={40} style={{borderRadius: '20px'}}  alt="avatar"  />
+            </div>
+          </div>
+        </div>
+        {children}
+      </body>
     </html>
   )
 }
